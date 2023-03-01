@@ -1,5 +1,6 @@
 import { GraphQLClient } from "graphql-request"
-import { getClientCredentialsToken } from "../../../../../niftory-samples/walletless-onboarding/src/lib/oauth"
+import { getClientCredentialsToken } from "./../lib/oauth"
+// import { getClientCredentialsToken } from "../../../../../niftory-samples/walletless-onboarding/src/lib/oauth"
 
 let client: GraphQLClient
 

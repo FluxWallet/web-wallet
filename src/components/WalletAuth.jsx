@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import qrcode from 'qrcode';
 import speakeasy from 'speakeasy';
+import { useRouter } from 'next/router'
 
 const WalletAuth = () => {
     const [qr, setqr] = useState([]);
     const [auth, setAuth] = useState("000000");
     const [secret, setSecret] = useState();
 
+    const router = useRouter();
+    
     useEffect(() => {
         function fetchData() {
             const secret = speakeasy.generateSecret(
@@ -92,7 +95,9 @@ const WalletAuth = () => {
                 <h3 className="font-bold text-lg"> Wallet is getting created</h3>
                 <progress className="progress w-56"></progress>
 
-                <div className="modal-action">
+                <div className="modal-action" onClick={() => {
+                    router.push('/wallet');
+                }} >
                     <label htmlFor="my-modal-6" className="btn">Yay!</label>
                 </div>
             </div>

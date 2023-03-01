@@ -8,7 +8,8 @@ import WalletAuth from '../../components/WalletAuth'
 
 export default function Signup() {
     return (
-        <div className='flex items-center justify-center h-screen bg-blue-100'>
+        <div className='h-full bg-blue-100 pb-7'>
+        <div className='flex items-center justify-center h-screen'>
             <div className='appbox'>
                 <div id='header'>
                     <div className='pt-4 px-4'>
@@ -28,7 +29,7 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-
+            </div>
         </div>
 
     )
